@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post Ride | Smart Ride</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <strong>Post Ride</strong>
+      <div>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <h3>Driver Ride Form</h3>
+      <div class="grid grid-2">
+        <input id="source" placeholder="Source" />
+        <input id="destination" placeholder="Destination" />
+        <input id="travelDate" type="date" />
+        <input id="travelTime" type="time" />
+        <input id="availableSeats" type="number" placeholder="Available seats" />
+        <input id="baseFare" type="number" step="0.01" placeholder="Base fare" />
+        <input id="ratePerKm" type="number" step="0.01" placeholder="Rate per km" />
+      </div>
+      <br />
+      <button onclick="postRide()">Post Ride</button>
+      <p id="rideMsg" class="msg"></p>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
