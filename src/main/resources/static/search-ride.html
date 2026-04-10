@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Ride | Smart Ride</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <strong>Search & Book Ride</strong>
+      <div>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <h3>Find Available Rides</h3>
+      <div class="grid grid-2">
+        <input id="searchSource" placeholder="Source" />
+        <input id="searchDestination" placeholder="Destination" />
+        <input id="searchDate" type="date" />
+      </div>
+      <br />
+      <button onclick="searchRides()">Search</button>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Seats</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="ridesBody">
+          <tr><td colspan="7">No data</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
